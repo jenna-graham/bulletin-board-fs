@@ -9,7 +9,7 @@ export function renderPosts(post) {
     h2.textContent = post.description;
 
     const p = document.createElement('p');
-    p.textContent = `name: ${post.author}, contact: ${post.contact}`;
+    p.textContent = post.contact;
 
     div.append(h1, h2, p);
     return div;
