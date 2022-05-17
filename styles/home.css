@@ -1,1 +1,9 @@
-/* add home page styles here */
+section {
+    display: flex;
+    flex-direction: row;
+
+} 
+main {
+    display: flex;
+    
+}
