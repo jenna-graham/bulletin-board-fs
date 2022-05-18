@@ -25,6 +25,7 @@ div.post {
 p {
     font-size: 1em;
     margin-top: 0px;
+    font-style: bold;
 
 }
 h1 {
@@ -34,4 +35,20 @@ h1 {
 }
 .hide {
     display: none;
+}
+#top {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+}
+button {
+    margin-top: 5px;
+    width: 175px;
+    height: 30px;
+    border-radius: 10px;
+}
+div.top {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
 }

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 body {
     /* feel free to update these css variables for a quick theme */
     
@@ -30,6 +30,9 @@ body {
     font-family: 'Titillium Web', sans-serif;
     background-color: dimgray;
     background-image: url(../assets/wood.jpg);
+    
+
+   
 }
 
 main {
@@ -40,7 +43,7 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
-section {
+/* section {
     background-color: var(--color5);
     max-width: 80%;
     display: flex;
@@ -52,7 +55,7 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
-}
+} */
 
 header {
     display: flex;
@@ -62,14 +65,11 @@ header {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     font-size: 1em;
     font-weight: bold;
     width: 200px;
-    margin-left: 50px;
-    
-  
+    margin-left: 50px; 
 }
 
 .gutter-right {
@@ -87,8 +87,6 @@ button {
 
 }
 
-
-  
 footer {
     position: fixed;
     width: 100%;
@@ -98,4 +96,21 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+h3 {
+    width: 100%;
+    background-color: rgba(35, 33, 32, 0.598);
+    font-size: 5em;
+    margin-bottom: 0px;
+    font-family: 'Shadows Into Light', cursive;
+    padding-left: 20px;
+    color: antiquewhite;
+    
+    
 }
