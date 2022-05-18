@@ -1,4 +1,4 @@
-import { getPosts, logout, getUser } from './fetch-utils.js';
+import { getPosts, logout, getUser, checkAuth, } from './fetch-utils.js';
 import { renderPosts } from './render-utils.js';
 
 async function loadData() {
@@ -30,4 +30,13 @@ if (user) {
     logInBtn.addEventListener('click', handleAuth);
     logInBtn.classList.remove('hide');
 }
+
+const newPostBtn = document.getElementById('create-button');
+
+newPostBtn.addEventListener('click', () => {
+    if (checkAuth()) window.location.href = '/create-page';
+
+    console.log('it worked');
+}
+);
 

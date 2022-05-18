@@ -10,10 +10,11 @@ export function getUser() {
 export function checkAuth() {
     const user = getUser();
     if (!user) location.replace('/auth-page');
+    return user;
 }
 
 export async function getPosts() {
-    const resp = await client.from('post').select('*');
+    const resp = await client.from('posts').select('*');
     console.log(resp);
     return resp.data;
 }
@@ -46,7 +47,7 @@ export async function signUpUser(email, password) {
     }
 }
 export async function createNewPost(post) {
-    const response = await client.from('post').insert(post);
+    const response = await client.from('posts').insert(post);
     if (response.data) {
         return response.data;
     } else {
