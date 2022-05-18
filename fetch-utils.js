@@ -9,7 +9,7 @@ export function getUser() {
 }
 export function checkAuth() {
     const user = getUser();
-    if (!user) location.replace('/');
+    if (!user) location.replace('/auth-page');
 }
 
 export async function getPosts() {
@@ -22,15 +22,21 @@ export async function signInUser(email, password) {
     if (response.user) {
         return response.user;
     } else {
+
         console.error(response.error);
     }
 }
+export async function logout() {
+    await client.auth.signOut();
 
-export async function redirectIfLoggedIn() {
-    if (getUser()) {
-        location.replace('./');
-    }
+    return (window.location.href = '/');
 }
+
+// export async function redirectIfLoggedIn() {
+//     if (getUser()) {
+//         location.replace('/');
+//     }
+// }
 export async function signUpUser(email, password) {
     const response = await client.auth.signUp({ email, password });
     if (response.user) {

@@ -1,7 +1,7 @@
-import { redirectIfLoggedIn, signUpUser } from '../fetch-utils.js';
+import { signUpUser } from '../fetch-utils.js';
 
 const signUpForm = document.getElementById('sign-up');
-redirectIfLoggedIn();
+// redirectIfLoggedIn();
 
 signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -9,12 +9,12 @@ signUpForm.addEventListener('submit', async (e) => {
     console.log({ email: data.get('email'), password: data.get('password') });
     const user = await signUpUser(data.get('email'), data.get('password'));
     if (user) {
-        location.replace('./');
+        location.assign('/');
     }
 
 });
 
-import { signInUser } from './fetch-utils.js';
+import { signInUser } from '../fetch-utils.js';
 const signInForm = document.getElementById('sign-in');
 
 signInForm.addEventListener('submit', async (e) => {
@@ -23,7 +23,7 @@ signInForm.addEventListener('submit', async (e) => {
     console.log({ email: data.get('email'), password: data.get('password') });
     const user = await signInUser(data.get('email'), data.get('password'));
     if (user) {
-        location.replace('./');
+        location.assign('/');
     }
 
 

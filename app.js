@@ -1,4 +1,4 @@
-import { getPosts } from './fetch-utils.js';
+import { getPosts, logout, getUser } from './fetch-utils.js';
 import { renderPosts } from './render-utils.js';
 
 async function loadData() {
@@ -11,3 +11,23 @@ async function loadData() {
 
 }
 loadData();
+
+const logInBtn = document.getElementById('login-button');
+
+async function handleLogout() {
+    await logout();
+}
+async function handleAuth() {
+    window.location.href = '/auth-page';
+}
+const user = getUser();
+if (user) {
+    logInBtn.textContent = 'Logout';
+    logInBtn.addEventListener('click', handleLogout);
+    logInBtn.classList.remove('hide');
+} else {
+    logInBtn.textContent = 'Sign In / Sign Up';
+    logInBtn.addEventListener('click', handleAuth);
+    logInBtn.classList.remove('hide');
+}
+
