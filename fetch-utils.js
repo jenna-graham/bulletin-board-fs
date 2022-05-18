@@ -45,3 +45,11 @@ export async function signUpUser(email, password) {
         console.error(response.error);
     }
 }
+export async function createNewPost(post) {
+    const response = await client.from('post').insert(post);
+    if (response.data) {
+        return response.data;
+    } else {
+        console.error(response.error);
+    }
+}
