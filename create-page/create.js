@@ -11,4 +11,5 @@ form.addEventListener('submit', async (e) => {
     };
     const response = await createNewPost(newPost);
     console.log(response);
+    return location.assign('/');
 });
