@@ -1,0 +1,28 @@
+body {
+    background-image: url(../assets/space-gf08110179_1920.jpg);
+    display: flex;
+    justify-content: center;
+}
+main {
+    width: 800px;
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border: solid 1px black;
+    box-shadow: 0px 10px 20px -12px rgba(0,0,0,0.95);;
+    background-color: rgba(254, 219, 113, 0.6);
+    padding-bottom: 100px;
+    padding-top: 40px;
+    margin-top: 100px; 
+}
+input {
+    width: 150px;
+    height: 20px;
+}
+button {
+    width: 75px;
+    border-radius: 10px;
+}

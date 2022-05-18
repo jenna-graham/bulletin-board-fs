@@ -1,1 +1,54 @@
-/* add home page styles here */
+section {
+    display: flex;
+    flex-direction: row;
+
+} 
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    
+}
+div.post {
+    width: 300px;
+    height: 375px;
+    text-align: center;
+    margin: 20px;
+    background-image: url(../assets/post-it2.png);
+    background-size: cover;
+    background-position: center;
+    justify-items: center;
+    
+    
+    
+}
+p {
+    font-size: 1em;
+    margin-top: 0px;
+    font-style: bold;
+
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-top: 90px;
+}
+.hide {
+    display: none;
+}
+#top {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+}
+button {
+    margin-top: 5px;
+    width: 175px;
+    height: 30px;
+    border-radius: 10px;
+}
+div.top {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
